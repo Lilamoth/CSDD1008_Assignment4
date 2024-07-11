@@ -12,5 +12,5 @@ func aboutHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "This is a simple API server built with Go.")
 }
 func main() {
-
+	http.HandleFunc("/", homeHandler)
 }
