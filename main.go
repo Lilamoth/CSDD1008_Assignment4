@@ -13,4 +13,6 @@ func aboutHandler(w http.ResponseWriter, r *http.Request) {
 }
 func main() {
 	http.HandleFunc("/", homeHandler)
+	http.HandleFunc("/about", aboutHandler)
+	http.ListenAndServe(":8080",nil)
 }
